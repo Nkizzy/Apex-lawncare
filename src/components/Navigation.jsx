@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
 import './Navigation.css'
 
 const Navigation = () => {
   const [isExpanded, setIsExpanded] = useState(false)
-  const buttonRef = useRef(null)
+  const touchStartX = useRef(0)
+  const touchStartY = useRef(0)
   const panelRef = useRef(null)
 
   const scrollToSection = (sectionId) => {
@@ -19,39 +20,39 @@ const Navigation = () => {
     setIsExpanded(!isExpanded)
   }
 
-  // Sync button position with side panel center for mobile Safari stability
-  useEffect(() => {
-    const updateButtonPosition = () => {
-      if (buttonRef.current && panelRef.current) {
-        const panelRect = panelRef.current.getBoundingClientRect()
-        const buttonHeight = buttonRef.current.offsetHeight
-        const centerY = panelRect.top + panelRect.height / 2
-        buttonRef.current.style.top = `${centerY - buttonHeight / 2}px`
-      }
-    }
+  const handleTouchStart = (e) => {
+    if (!isExpanded) return
+    touchStartX.current = e.touches[0].clientX
+    touchStartY.current = e.touches[0].clientY
+  }
 
-    // Update on mount and when panel state changes
-    updateButtonPosition()
-
-    // Update on resize and scroll (for mobile Safari UI changes)
-    window.addEventListener('resize', updateButtonPosition)
-    window.addEventListener('orientationchange', updateButtonPosition)
+  const handleTouchMove = (e) => {
+    if (!isExpanded) return
+    // Prevent default scrolling if we're swiping horizontally
+    const deltaX = Math.abs(e.touches[0].clientX - touchStartX.current)
+    const deltaY = Math.abs(e.touches[0].clientY - touchStartY.current)
     
-    // Use ResizeObserver to watch for viewport changes (mobile Safari)
-    const resizeObserver = new ResizeObserver(() => {
-      updateButtonPosition()
-    })
-    
-    if (panelRef.current) {
-      resizeObserver.observe(document.documentElement)
+    // Only prevent default if horizontal swipe is more dominant
+    if (deltaX > deltaY && deltaX > 10) {
+      e.preventDefault()
     }
+  }
 
-    return () => {
-      window.removeEventListener('resize', updateButtonPosition)
-      window.removeEventListener('orientationchange', updateButtonPosition)
-      resizeObserver.disconnect()
+  const handleTouchEnd = (e) => {
+    if (!isExpanded) return
+    
+    const touchEndX = e.changedTouches[0].clientX
+    const touchEndY = e.changedTouches[0].clientY
+    const deltaX = touchEndX - touchStartX.current
+    const deltaY = Math.abs(touchEndY - touchStartY.current)
+    
+    // Minimum swipe distance and check if it's more horizontal than vertical
+    const minSwipeDistance = 50
+    if (deltaX < -minSwipeDistance && Math.abs(deltaX) > deltaY) {
+      // Swiped left - close the sidebar
+      setIsExpanded(false)
     }
-  }, [isExpanded])
+  }
 
   const navSections = [
     { id: 'hero', label: 'Home' },
@@ -73,39 +74,47 @@ const Navigation = () => {
         />
       )}
       
-      {/* Arrow button - anchored to side panel position */}
-      <button 
-        ref={buttonRef}
-        className={`nav-arrow ${isExpanded ? 'expanded' : ''}`}
-        onClick={togglePanel}
-        aria-label={isExpanded ? 'Close navigation' : 'Open navigation'}
-      >
-        {isExpanded ? <FaChevronLeft /> : <FaChevronRight />}
-      </button>
+      {/* Navigation wrapper to contain both button and panel */}
+      <div className={`nav-wrapper ${isExpanded ? 'expanded' : ''}`}>
+        {/* Arrow button - moves with panel */}
+        <button 
+          className="nav-arrow"
+          onClick={togglePanel}
+          aria-label={isExpanded ? 'Close navigation' : 'Open navigation'}
+        >
+          {isExpanded ? <FaChevronLeft /> : <FaChevronRight />}
+        </button>
 
-      {/* Side panel */}
-      <nav ref={panelRef} className={`side-panel ${isExpanded ? 'expanded' : ''}`}>
-        <div className="panel-content">
-          <div className="panel-logo" onClick={() => scrollToSection('hero')}>
-            <h2>La Queen Nails</h2>
+        {/* Side panel */}
+        <nav 
+          ref={panelRef}
+          className="side-panel"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div className="panel-content">
+            <div className="panel-logo" onClick={() => scrollToSection('hero')}>
+              <h2>Flower City Nails</h2>
+            </div>
+            <ul className="panel-menu">
+              {navSections.map((section) => (
+                <li key={section.id}>
+                  <a 
+                    href={`#${section.id}`}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      scrollToSection(section.id)
+                    }}
+                  >
+                    {section.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="panel-menu">
-            {navSections.map((section) => (
-              <li key={section.id}>
-                <a 
-                  href={`#${section.id}`}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    scrollToSection(section.id)
-                  }}
-                >
-                  {section.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </>
   )
 }

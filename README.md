@@ -1,6 +1,6 @@
-# La Queen Nails Website
+# Flower City Nails Website
 
-A modern, responsive website for La Queen Nails featuring a captivating hero section, services, gallery, reviews, social media embeds, interactive map, and contact form.
+A modern, responsive website for Flower City Nails featuring a captivating hero section, services, gallery, reviews, social media embeds, interactive map, and contact form.
 
 ## Features
 

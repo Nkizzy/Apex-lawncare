@@ -8,11 +8,13 @@ import Map from './components/Map'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Navigation from './components/Navigation'
+import Header from './components/Header'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Navigation />
       <Hero />
       <Services />

@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>La Queen Nails</h3>
+            <h3>Flower City Nails</h3>
             <p>Where Beauty Blooms</p>
             <p className="footer-tagline">Experience luxury nail care and spa treatments in an elegant, relaxing environment.</p>
           </div>
@@ -25,7 +25,7 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <ul>
               <li><FaPhone /> (555) 123-4567</li>
-              <li><FaEnvelope /> info@laqueennails.com</li>
+              <li><FaEnvelope /> info@flowercitynails.com</li>
               <li>123 Main Street, Your City, State 12345</li>
             </ul>
           </div>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} La Queen Nails. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Flower City Nails. All rights reserved.</p>
         </div>
       </div>
     </footer>

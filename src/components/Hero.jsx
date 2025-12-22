@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            La Queen<br />
+            Flower City<br />
             Nails
           </h1>
           <p className="hero-subtitle">Where Beauty Blooms</p>

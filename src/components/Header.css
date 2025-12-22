@@ -1,0 +1,128 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(44, 44, 44, 0.98) 0%, rgba(60, 60, 60, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  z-index: 1002;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.site-header.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.site-header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.header-logo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+.header-logo h1 {
+  color: var(--white);
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  white-space: nowrap;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-button {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  outline: none;
+}
+
+.nav-button:hover {
+  background: rgba(212, 165, 116, 0.2);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 968px) {
+  .header-container {
+    gap: 1rem;
+  }
+
+  .header-logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 0.7rem 1rem;
+  }
+
+  .header-logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .header-nav {
+    gap: 0.3rem;
+  }
+
+  .nav-button {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.75rem;
+  }
+}
+

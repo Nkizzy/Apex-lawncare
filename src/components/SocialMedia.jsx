@@ -48,7 +48,7 @@ const SocialMedia = () => {
                 frameBorder="0"
                 allowFullScreen={true}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                title="La Queen Nails Facebook Page"
+                title="Flower City Nails Facebook Page"
               ></iframe>
             </div>
           </div>
@@ -60,7 +60,7 @@ const SocialMedia = () => {
             <div className="social-embed">
               <blockquote 
                 className="instagram-media" 
-                data-instgrm-permalink="https://www.instagram.com/laqueennailsspa/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                data-instgrm-permalink="https://www.instagram.com/flowercitynails/?utm_source=ig_embed&amp;utm_campaign=loading" 
                 data-instgrm-version="14" 
                 style={{ 
                   background: '#FFF', 
@@ -76,7 +76,7 @@ const SocialMedia = () => {
               >
                 <div style={{ padding: '16px' }}>
                   <a 
-                    href="https://www.instagram.com/laqueennailsspa/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                    href="https://www.instagram.com/flowercitynails/?utm_source=ig_embed&amp;utm_campaign=loading" 
                     style={{ 
                       background: '#FFFFFF', 
                       lineHeight: 0, 
@@ -131,7 +131,7 @@ const SocialMedia = () => {
                     </div>
                   </a>
                   <p style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', lineHeight: '17px', marginBottom: 0, marginTop: '8px', overflow: 'hidden', padding: '8px 0 7px', textAlign: 'center', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                    <a href="https://www.instagram.com/laqueennailsspa/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank" rel="noopener noreferrer">La Queen Nails &amp; SPA （Syracuse</a> (@<a href="https://www.instagram.com/laqueennailsspa/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank" rel="noopener noreferrer">laqueennailsspa</a>) • Instagram photos and videos
+                    <a href="https://www.instagram.com/flowercitynails/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank" rel="noopener noreferrer">Flower City Nails</a> (@<a href="https://www.instagram.com/flowercitynails/?utm_source=ig_embed&amp;utm_campaign=loading" style={{ color: '#c9c8cd', fontFamily: 'Arial,sans-serif', fontSize: '14px', fontStyle: 'normal', fontWeight: 'normal', lineHeight: '17px' }} target="_blank" rel="noopener noreferrer">flowercitynails</a>) • Instagram photos and videos
                   </p>
                 </div>
               </blockquote>
