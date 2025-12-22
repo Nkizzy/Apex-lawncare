@@ -112,6 +112,28 @@
   line-height: 1.8;
 }
 
+.facebook-embed {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.facebook-embed h4 {
+  color: var(--text-dark);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.fb-page-wrapper {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 968px) {
   .map-container {
     grid-template-columns: 1fr;
@@ -137,6 +159,19 @@
 
   .map-info h3 {
     font-size: 1.5rem;
+  }
+
+  .facebook-embed {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+
+  .fb-page-wrapper {
+    max-width: 100%;
+  }
+
+  .fb-page-wrapper iframe {
+    height: 400px !important;
   }
 }
 
