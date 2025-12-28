@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Gallery.css'
 
 const Gallery = () => {
-  // Sample images - replace these with your actual salon photos
+  // Gallery images - replace these with your actual salon photos
   const galleryImages = [
     { 
       id: 1, 

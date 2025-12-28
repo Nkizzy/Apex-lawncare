@@ -1,6 +1,6 @@
-# Flower City Nails Website
+# Tips and Toes Salon Website
 
-A modern, responsive website for Flower City Nails featuring a captivating hero section, services, gallery, reviews, social media embeds, interactive map, and contact form.
+A modern, responsive website for Tips and Toes Salon featuring a captivating hero section, services, gallery, reviews, social media embeds, interactive map, and contact form.
 
 ## Features
 

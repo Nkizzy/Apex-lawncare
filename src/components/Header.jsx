@@ -48,7 +48,7 @@ const Header = () => {
     <header className={`site-header ${isVisible ? 'visible' : 'hidden'}`}>
       <div className="header-container">
         <div className="header-logo" onClick={scrollToTop}>
-          <h1>Flower City Nails</h1>
+          <h1>Tips and Toes</h1>
         </div>
         <nav className="header-nav">
           {navSections.map((section) => (

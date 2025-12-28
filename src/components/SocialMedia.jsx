@@ -25,7 +25,7 @@ const SocialMedia = () => {
                 frameBorder="0"
                 allowFullScreen={true}
                 allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                title="Flower City Nails Facebook Page"
+                title="Tips and Toes Salon Facebook Page"
               ></iframe>
             </div>
           </div>
@@ -37,10 +37,10 @@ const SocialMedia = () => {
             <div className="social-embed instagram-link">
               <div className="instagram-content">
                 <FaInstagram className="instagram-large-icon" />
-                <h4>@flowercitynails</h4>
+                <h4>@tipsandtoes</h4>
                 <p>Follow us on Instagram to see our latest nail art designs, spa treatments, and behind-the-scenes content!</p>
                 <a 
-                  href="https://www.instagram.com/flowercitynails/" 
+                  href="https://www.instagram.com/tipsandtoes/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="instagram-button"

@@ -43,8 +43,8 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Flower City<br />
-            Nails
+            Tips and<br />
+            Toes
           </h1>
           <p className="hero-subtitle">Where Beauty Blooms</p>
           <p className="hero-description">

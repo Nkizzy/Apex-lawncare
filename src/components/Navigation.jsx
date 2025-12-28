@@ -95,7 +95,7 @@ const Navigation = () => {
         >
           <div className="panel-content">
             <div className="panel-logo" onClick={() => scrollToSection('hero')}>
-              <h2>Flower City Nails</h2>
+              <h2>Tips and Toes</h2>
             </div>
             <ul className="panel-menu">
               {navSections.map((section) => (
