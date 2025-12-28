@@ -6,10 +6,7 @@
   margin-top: 100vh;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* Container class moved to global index.css for consistency */
 
 .section-header {
   text-align: center;
