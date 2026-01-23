@@ -2,52 +2,34 @@ import React from 'react'
 import './Map.css'
 
 const Map = () => {
-  const address = "1100 Jefferson Rd., Ste. 7, Rochester, NY"
+  const address = "123 Main Street, Your City, State 12345"
 
   return (
     <section id="map" className="map-section">
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Find Us</h2>
-          <p className="section-subtitle">Visit us at our beautiful location</p>
+          <p className="section-subtitle">Find us or contact us for service</p>
         </div>
         <div className="map-container">
           <div className="map-wrapper">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d747.9623517460956!2d-76.04440433452697!3d43.02867096791386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d98da363865e6d%3A0x5c77e63c9fa72c1d!2sSample%20Salon!5e1!3m2!1sen!2sus!4v1765937552035!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d747.9623517460956!2d-76.04440433452697!3d43.02867096791386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d98da363865e6d%3A0x5c77e63c9fa72c1d!2sSample%20Business!5e1!3m2!1sen!2sus!4v1765937552035!5m2!1sen!2sus" 
               allowFullScreen="" 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="Tips and Toes Salon Location"
+              title="Sample Business Location"
             ></iframe>
           </div>
           <div className="map-info">
-            <h3>Tips and Toes Salon</h3>
+            <h3>Sample Business</h3>
             <p className="map-address">{address}</p>
             <div className="map-hours">
-              <h4>Hours</h4>
-              <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
-              <p>Saturday: 9:00 AM - 6:00 PM</p>
-              <p>Sunday: 10:00 AM - 5:00 PM</p>
-            </div>
-            <div className="facebook-embed">
-              <h4>Follow Us on Facebook</h4>
-              <div className="fb-page-wrapper">
-                <iframe 
-                  src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsamplesalon%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
-                  width="100%" 
-                  height="500" 
-                  style={{ border: 'none', overflow: 'hidden' }} 
-                  scrolling="no" 
-                  frameBorder="0" 
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  title="Tips and Toes Salon Facebook Page"
-                ></iframe>
-              </div>
+              <h4>Service Hours</h4>
+              <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
+              <p>Saturday: 8:00 AM - 4:00 PM</p>
+              <p>Sunday: Emergency services only</p>
+              <p className="map-note"><small>Hours may vary by season. Snow removal available 24/7 during winter storms.</small></p>
             </div>
           </div>
         </div>

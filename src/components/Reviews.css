@@ -37,7 +37,7 @@
 }
 
 .review-card:hover {
-  box-shadow: 0 8px 25px rgba(212, 165, 116, 0.15);
+  box-shadow: 0 8px 25px rgba(74, 124, 42, 0.15);
 }
 
 .carousel-arrow {
@@ -63,7 +63,7 @@
 .carousel-arrow:hover:not(:disabled) {
   background: var(--secondary-color);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+  box-shadow: 0 6px 20px rgba(74, 124, 42, 0.4);
 }
 
 .carousel-arrow:disabled {
@@ -102,7 +102,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
-  border-top: 1px solid rgba(212, 165, 116, 0.2);
+  border-top: 1px solid rgba(74, 124, 42, 0.2);
 }
 
 .review-author strong {

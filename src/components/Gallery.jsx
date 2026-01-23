@@ -2,37 +2,52 @@ import React, { useState } from 'react'
 import './Gallery.css'
 
 const Gallery = () => {
-  // Gallery images - replace these with your actual salon photos
+  // Gallery images - replace these with your actual lawncare photos
   const galleryImages = [
     { 
       id: 1, 
-      src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&h=800&fit=crop', 
-      alt: 'Elegant nail art with floral design' 
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=800&fit=crop', 
+      alt: 'Professional lawn mowing service' 
     },
     { 
       id: 2, 
-      src: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&h=800&fit=crop', 
-      alt: 'Beautiful manicure with gemstone accents' 
+      src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=800&fit=crop', 
+      alt: 'Snow removal and plowing service' 
     },
     { 
       id: 3, 
-      src: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=800&h=800&fit=crop', 
-      alt: 'Relaxing spa pedicure treatment' 
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=800&fit=crop', 
+      alt: 'Well-maintained green lawn' 
     },
     { 
       id: 4, 
-      src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&h=800&fit=crop', 
-      alt: 'Professional manicure service' 
+      src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=800&fit=crop', 
+      alt: 'Driveway snow plowing' 
     },
     { 
       id: 5, 
-      src: 'https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&h=800&fit=crop', 
-      alt: 'Luxury nail art design' 
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=800&fit=crop', 
+      alt: 'Landscaping and lawn care work' 
     },
     { 
       id: 6, 
-      src: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&h=800&fit=crop', 
-      alt: 'Elegant French manicure' 
+      src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=800&fit=crop', 
+      alt: 'Winter snow removal service' 
+    },
+    { 
+      id: 7, 
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=800&fit=crop', 
+      alt: 'Professional lawn maintenance' 
+    },
+    { 
+      id: 8, 
+      src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=800&fit=crop', 
+      alt: 'Commercial snow removal' 
+    },
+    { 
+      id: 9, 
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=800&fit=crop', 
+      alt: 'Beautiful landscaped yard' 
     },
   ]
 
@@ -43,12 +58,12 @@ const Gallery = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Gallery</h2>
-          <p className="section-subtitle">See our beautiful work and elegant space</p>
+          <p className="section-subtitle">See our quality work and beautiful results</p>
         </div>
         <div className="gallery-grid">
           {galleryImages.map((image, index) => {
             // Determine size class based on position in mosaic pattern
-            const sizeClasses = ['large', 'small', 'medium', 'medium', 'large', 'small']
+            const sizeClasses = ['large', 'small', 'medium', 'medium', 'large', 'small', 'medium', 'small', 'large']
             const sizeClass = sizeClasses[index] || 'medium'
             
             return (

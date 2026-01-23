@@ -26,7 +26,7 @@
   grid-template-areas:
     "large1 small1 medium1 medium1"
     "medium2 medium2 large2 small2"
-    "small3 medium3 medium3 large3";
+    "medium3 small3 large3 large3";
   gap: 1.5rem;
   position: relative;
   z-index: 1;
@@ -75,9 +75,24 @@
   animation-delay: 0.6s;
 }
 
+.gallery-item:nth-child(7) {
+  grid-area: medium3;
+  animation-delay: 0.7s;
+}
+
+.gallery-item:nth-child(8) {
+  grid-area: small3;
+  animation-delay: 0.8s;
+}
+
+.gallery-item:nth-child(9) {
+  grid-area: large3;
+  animation-delay: 0.9s;
+}
+
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(212, 165, 116, 0.25);
+  box-shadow: 0 8px 30px rgba(74, 124, 42, 0.25);
 }
 
 .gallery-item img {

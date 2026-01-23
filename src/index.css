@@ -15,24 +15,27 @@ object {
 }
 
 :root {
-  --primary-color: #d4a574;
-  --secondary-color: #8b6f47;
-  --accent-color: #f5e6d3;
+  --primary-color: #4a7c2a;
+  --secondary-color: #2d5016;
+  --accent-color: #e8f5e9;
+  --earth-tone: #6b5b3d;
+  --earth-tone-light: #8b7355;
   --text-dark: #2c2c2c;
   --text-light: #666;
   --white: #ffffff;
-  --light-bg: #fafafa;
+  --light-bg: #f5f7f4;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
 .section-title,
@@ -47,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 .map-hours h4,
 .footer-section h3,
 .footer-section h4 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {

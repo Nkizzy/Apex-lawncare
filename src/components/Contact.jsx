@@ -51,7 +51,7 @@ const Contact = () => {
             <div className="info-card">
               <FaEnvelope className="info-icon" />
               <h3>Email</h3>
-              <p>info@tipsandtoes.com</p>
+              <p>contact@samplewebsite.com</p>
             </div>
             <div className="info-card">
               <FaMapMarkerAlt className="info-icon" />
@@ -107,10 +107,11 @@ const Contact = () => {
                   onChange={handleChange}
                 >
                   <option value="">Select a service</option>
-                  <option value="manicure">Manicure</option>
-                  <option value="pedicure">Pedicure</option>
-                  <option value="spa">Spa Treatment</option>
-                  <option value="nail-art">Nail Art</option>
+                  <option value="mowing">Lawn Mowing & Maintenance</option>
+                  <option value="snow">Snow Removal & Plowing</option>
+                  <option value="landscaping">Landscaping & Design</option>
+                  <option value="fertilization">Fertilization & Weed Control</option>
+                  <option value="cleanup">Seasonal Cleanup</option>
                   <option value="other">Other</option>
                 </select>
               </div>

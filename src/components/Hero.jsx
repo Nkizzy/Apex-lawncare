@@ -14,18 +14,18 @@ const Hero = () => {
   const galleryImages = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&h=500&fit=crop',
-      alt: 'Elegant nail art'
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=500&fit=crop',
+      alt: 'Professional lawn mowing service'
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=400&fit=crop',
-      alt: 'Beautiful manicure'
+      src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=400&fit=crop',
+      alt: 'Snow removal and plowing'
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&h=500&fit=crop',
-      alt: 'Spa treatment'
+      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=500&fit=crop',
+      alt: 'Landscaping and lawn care'
     }
   ]
 
@@ -43,16 +43,16 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Tips and<br />
-            Toes
+            Sample<br />
+            Business
           </h1>
-          <p className="hero-subtitle">Where Beauty Blooms</p>
+          <p className="hero-subtitle">Transforming Your Outdoor Space</p>
           <p className="hero-description">
-            Experience luxury nail care and spa treatments in an elegant, relaxing environment.
-            Your journey to beauty and wellness starts here.
+            Professional lawn care, landscaping, and snow removal services you can trust.
+            From pristine lawns to clear driveways, we keep your property looking its best year-round.
           </p>
           <div className="hero-buttons">
-            <a href="#social" className="btn btn-primary">Visit our socials</a>
+            <a href="#contact" className="btn btn-primary">Get a Quote</a>
             <a href="#services" className="btn btn-secondary">Our Services</a>
           </div>
         </div>

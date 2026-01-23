@@ -44,57 +44,57 @@ const Reviews = () => {
 
   const reviews = [
     {
-      name: 'Sarah Johnson',
+      name: 'Michael Thompson',
       rating: 5,
-      text: 'Absolutely amazing experience! The staff is professional, the atmosphere is relaxing, and my nails look perfect. Highly recommend!',
+      text: 'Sample Business has been taking care of my lawn for two seasons now. They\'re reliable, professional, and my yard has never looked better. Highly recommend!',
       date: '2 weeks ago'
     },
     {
-      name: 'Emily Chen',
+      name: 'Jennifer Martinez',
       rating: 5,
-      text: 'Best nail salon in town! The attention to detail is incredible and they always make sure you\'re comfortable. Love coming here!',
+      text: 'Best lawncare service in the area! They showed up right after the snowstorm and cleared my driveway perfectly. Always on time and thorough.',
       date: '1 month ago'
     },
     {
-      name: 'Maria Rodriguez',
+      name: 'David Wilson',
       rating: 5,
-      text: 'Beautiful work and excellent service. The spa treatments are so relaxing. I always leave feeling refreshed and beautiful.',
+      text: 'Excellent landscaping work! They transformed my backyard into a beautiful space. The team is knowledgeable and the results exceeded my expectations.',
       date: '3 weeks ago'
     },
     {
-      name: 'Jessica Williams',
+      name: 'Sarah Johnson',
       rating: 5,
-      text: 'The nail art designs are stunning! They really listen to what you want and deliver beyond expectations. Five stars!',
+      text: 'The fertilization program they set up has made such a difference. My grass is thick, green, and healthy. Worth every penny!',
       date: '1 week ago'
     },
     {
-      name: 'Amanda Thompson',
+      name: 'Robert Chen',
       rating: 5,
-      text: 'I\'ve been coming here for months and I\'m always impressed. The quality is outstanding and the staff treats you like family. Can\'t imagine going anywhere else!',
+      text: 'I\'ve been using Sample Business for both lawn care and snow removal for over a year. Consistent quality, fair pricing, and they always communicate well.',
       date: '5 days ago'
     },
     {
-      name: 'Lisa Anderson',
+      name: 'Amanda Davis',
       rating: 5,
-      text: 'Perfect place for a relaxing spa day! The pedicure was heavenly and my nails have never looked better. The attention to detail is unmatched.',
+      text: 'Perfect service! They handle everything from mowing to seasonal cleanup. My property always looks pristine. The attention to detail is unmatched.',
       date: '3 days ago'
     },
     {
-      name: 'Rachel Martinez',
+      name: 'James Anderson',
       rating: 5,
-      text: 'Outstanding service from start to finish! The nail technicians are true artists. My gel manicure lasted perfectly for weeks. Will definitely be back!',
+      text: 'Outstanding snow removal service! They cleared my driveway and walkways quickly after the big storm. Professional, efficient, and reasonably priced.',
       date: '1 day ago'
     },
     {
-      name: 'Jennifer Lee',
+      name: 'Lisa Brown',
       rating: 5,
-      text: 'I\'ve tried many nail salons, but this one is by far the best. The spa atmosphere is so calming, and the results are always flawless. Highly recommend to everyone!',
+      text: 'I\'ve tried several lawncare companies, but Sample Business is by far the best. They\'re reliable, professional, and my lawn has never looked better. Highly recommend!',
       date: '4 days ago'
     },
     {
-      name: 'Nicole Brown',
+      name: 'Mark Taylor',
       rating: 5,
-      text: 'Exceptional quality and service! The staff is friendly, professional, and truly cares about giving you the best experience. My nails look absolutely stunning!',
+      text: 'Exceptional quality and service! The team is friendly, professional, and truly cares about giving you the best results. My yard looks absolutely amazing!',
       date: '6 days ago'
     }
   ]

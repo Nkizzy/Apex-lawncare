@@ -1,5 +1,6 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
+import logo from '../assets/grounduplogo.png'
 import './Navigation.css'
 
 const Navigation = () => {
@@ -8,16 +9,31 @@ const Navigation = () => {
   const touchStartY = useRef(0)
   const panelRef = useRef(null)
 
+  // Cleanup: remove class on unmount
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('sidebar-expanded')
+    }
+  }, [])
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
       setIsExpanded(false)
+      document.body.classList.remove('sidebar-expanded')
     }
   }
 
   const togglePanel = () => {
-    setIsExpanded(!isExpanded)
+    const newExpanded = !isExpanded
+    setIsExpanded(newExpanded)
+    // Add/remove class on body to control header visibility
+    if (newExpanded) {
+      document.body.classList.add('sidebar-expanded')
+    } else {
+      document.body.classList.remove('sidebar-expanded')
+    }
   }
 
   const handleTouchStart = (e) => {
@@ -51,6 +67,7 @@ const Navigation = () => {
     if (deltaX < -minSwipeDistance && Math.abs(deltaX) > deltaY) {
       // Swiped left - close the sidebar
       setIsExpanded(false)
+      document.body.classList.remove('sidebar-expanded')
     }
   }
 
@@ -70,7 +87,10 @@ const Navigation = () => {
       {isExpanded && (
         <div 
           className="nav-backdrop" 
-          onClick={() => setIsExpanded(false)}
+          onClick={() => {
+            setIsExpanded(false)
+            document.body.classList.remove('sidebar-expanded')
+          }}
         />
       )}
       
@@ -95,7 +115,8 @@ const Navigation = () => {
         >
           <div className="panel-content">
             <div className="panel-logo" onClick={() => scrollToSection('hero')}>
-              <h2>Tips and Toes</h2>
+              <img src={logo} alt="Sample Business" className="panel-logo-image" />
+              <h2 className="panel-logo-text">Sample Business</h2>
             </div>
             <ul className="panel-menu">
               {navSections.map((section) => (
