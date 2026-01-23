@@ -181,27 +181,23 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas: unset;
-    gap: 0;
-    padding: 0 1rem;
+    gap: 1rem;
+    padding: 0;
   }
 
   .gallery-item {
     grid-area: unset !important;
     aspect-ratio: 1;
-    min-height: 180px;
-    margin-bottom: -30px;
-    transform: translateX(0);
+    min-height: 150px;
+    margin: 0;
+    transform: none;
     z-index: 1;
     position: relative;
   }
 
-  .gallery-item:nth-child(odd) {
-    transform: translateX(-25px);
-    z-index: 2;
-  }
-
+  .gallery-item:nth-child(odd),
   .gallery-item:nth-child(even) {
-    transform: translateX(25px);
+    transform: none;
     z-index: 1;
   }
 

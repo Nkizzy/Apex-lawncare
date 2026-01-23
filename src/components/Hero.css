@@ -38,6 +38,9 @@
   transform: translateX(-50%);
   z-index: 3;
   text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .hero-logo-image {
@@ -46,6 +49,7 @@
   max-width: 200px;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
 .hero-container {
@@ -280,6 +284,15 @@
 
   .hero-container {
     padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .hero-logo-mobile {
+    padding: 0 1.5rem;
+  }
+
+  .hero-logo-image {
+    max-width: 180px;
   }
 
   .hero-title {
