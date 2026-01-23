@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import logo from '../assets/apexlogo.png'
 import './Hero.css'
 
 const Hero = () => {
@@ -40,6 +41,9 @@ const Hero = () => {
       }}
     >
       <div className="hero-overlay"></div>
+      <div className="hero-logo-mobile">
+        <img src={logo} alt="Apex Pest Solutions" className="hero-logo-image" />
+      </div>
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">

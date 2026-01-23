@@ -181,17 +181,41 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas: unset;
-    gap: 1rem;
+    gap: 0;
+    padding: 0 1rem;
   }
 
   .gallery-item {
     grid-area: unset !important;
     aspect-ratio: 1;
     min-height: 180px;
+    margin-bottom: -30px;
+    transform: translateX(0);
+    z-index: 1;
+    position: relative;
+  }
+
+  .gallery-item:nth-child(odd) {
+    transform: translateX(-25px);
+    z-index: 2;
+  }
+
+  .gallery-item:nth-child(even) {
+    transform: translateX(25px);
+    z-index: 1;
+  }
+
+  .gallery-item:last-of-type {
+    margin-bottom: 0;
   }
 
   .gallery-item:nth-child(n) {
     grid-area: unset;
+  }
+
+  /* Hide the 9th image on mobile to have even number */
+  .gallery-item:nth-child(9) {
+    display: none;
   }
 
   .lightbox-content {
