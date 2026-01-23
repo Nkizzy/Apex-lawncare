@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 // Base path must match repository name for proper asset loading
 export default defineConfig({
   plugins: [react()],
-  base: '/sample-lawncare/',
+  base: '/Apex-lawncare/',
 })
 
