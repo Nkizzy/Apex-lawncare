@@ -41,7 +41,7 @@
 
 .info-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(74, 124, 42, 0.15);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15);
 }
 
 .info-icon {

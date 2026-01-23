@@ -151,7 +151,7 @@
 
 .panel-menu a:hover {
   color: var(--white);
-  background: rgba(74, 124, 42, 0.15);
+  background: rgba(220, 38, 38, 0.15);
   padding-left: 1.5rem;
 }
 

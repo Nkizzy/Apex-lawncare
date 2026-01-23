@@ -92,7 +92,7 @@
 
 .gallery-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(74, 124, 42, 0.25);
+  box-shadow: 0 8px 30px rgba(220, 38, 38, 0.25);
 }
 
 .gallery-item img {

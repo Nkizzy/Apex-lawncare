@@ -85,7 +85,7 @@
 .map-link:hover {
   background: var(--secondary-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(74, 124, 42, 0.4);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
 }
 
 .map-info {

@@ -51,7 +51,7 @@ const Contact = () => {
             <div className="info-card">
               <FaEnvelope className="info-icon" />
               <h3>Email</h3>
-              <p>contact@samplewebsite.com</p>
+              <p>info@apexpestsolutions.com</p>
             </div>
             <div className="info-card">
               <FaMapMarkerAlt className="info-icon" />
@@ -61,7 +61,7 @@ const Contact = () => {
             <div className="info-card">
               <FaClock className="info-icon" />
               <h3>Hours</h3>
-              <p>Mon-Fri: 9AM-7PM<br />Sat: 9AM-6PM<br />Sun: 10AM-5PM</p>
+              <p>Mon-Fri: 8AM-6PM<br />Sat: 9AM-4PM<br />Sun: Emergency Only</p>
             </div>
           </div>
           {ENABLE_FORM && (
@@ -107,11 +107,11 @@ const Contact = () => {
                   onChange={handleChange}
                 >
                   <option value="">Select a service</option>
-                  <option value="mowing">Lawn Mowing & Maintenance</option>
-                  <option value="snow">Snow Removal & Plowing</option>
-                  <option value="landscaping">Landscaping & Design</option>
-                  <option value="fertilization">Fertilization & Weed Control</option>
-                  <option value="cleanup">Seasonal Cleanup</option>
+                  <option value="ant-roach">Ant & Roach Control</option>
+                  <option value="rodent">Rodent Removal</option>
+                  <option value="termite">Termite Treatment</option>
+                  <option value="bedbug">Bed Bug Extermination</option>
+                  <option value="wildlife">Wildlife Removal</option>
                   <option value="other">Other</option>
                 </select>
               </div>

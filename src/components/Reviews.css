@@ -37,7 +37,7 @@
 }
 
 .review-card:hover {
-  box-shadow: 0 8px 25px rgba(74, 124, 42, 0.15);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.15);
 }
 
 .carousel-arrow {
@@ -102,7 +102,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
-  border-top: 1px solid rgba(74, 124, 42, 0.2);
+  border-top: 1px solid rgba(220, 38, 38, 0.2);
 }
 
 .review-author strong {

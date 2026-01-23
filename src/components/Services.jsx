@@ -10,39 +10,39 @@ const Services = () => {
 
   const services = [
     {
-      title: 'Lawn Mowing & Maintenance',
-      description: 'Regular mowing, edging, and trimming to keep your lawn looking pristine and healthy all season long.',
-      price: 'Starting at $50',
-      beforeImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop',
-      afterImage: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop'
-    },
-    {
-      title: 'Snow Removal & Plowing',
-      description: 'Reliable snow removal and plowing services to keep your driveways and walkways safe and clear.',
-      price: 'Starting at $75',
-      beforeImage: 'https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&h=600&fit=crop',
-      afterImage: 'https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=800&h=600&fit=crop'
-    },
-    {
-      title: 'Landscaping & Design',
-      description: 'Custom landscape design and installation to transform your outdoor space into a beautiful oasis.',
-      price: 'Starting at $500',
-      beforeImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop',
-      afterImage: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop'
-    },
-    {
-      title: 'Fertilization & Weed Control',
-      description: 'Professional fertilization and weed control treatments to promote healthy, lush grass growth.',
-      price: 'Starting at $100',
-      beforeImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop',
-      afterImage: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop'
-    },
-    {
-      title: 'Seasonal Cleanup',
-      description: 'Spring and fall cleanup services including leaf removal, debris clearing, and garden preparation.',
+      title: 'Ant & Roach Control',
+      description: 'Effective elimination of ants, roaches, and other crawling insects with safe, professional treatments that protect your family and pets.',
       price: 'Starting at $150',
       beforeImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop',
+      afterImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop'
+    },
+    {
+      title: 'Rodent Removal',
+      description: 'Comprehensive rodent control services including mice, rats, and squirrels. We identify entry points, remove existing pests, and prevent future infestations.',
+      price: 'Starting at $200',
+      beforeImage: 'https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&h=600&fit=crop',
       afterImage: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop'
+    },
+    {
+      title: 'Termite Treatment',
+      description: 'Professional termite inspection and treatment to protect your property from costly structural damage. We use advanced detection and elimination methods.',
+      price: 'Starting at $500',
+      beforeImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop',
+      afterImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop'
+    },
+    {
+      title: 'Bed Bug Extermination',
+      description: 'Complete bed bug elimination using heat treatment and targeted applications. We ensure thorough removal and provide follow-up inspections.',
+      price: 'Starting at $300',
+      beforeImage: 'https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&h=600&fit=crop',
+      afterImage: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop'
+    },
+    {
+      title: 'Wildlife Removal',
+      description: 'Humane removal of raccoons, squirrels, birds, and other wildlife from your property. We safely relocate animals and seal entry points.',
+      price: 'Starting at $250',
+      beforeImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop',
+      afterImage: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop'
     }
   ]
 
@@ -107,12 +107,12 @@ const Services = () => {
         onTouchStart={handleStart}
       >
         <div className="slider-container" ref={sliderContainerRef}>
-          <img src={afterImage} alt="After" className="slider-image slider-after" />
+          <img src={beforeImage} alt="Before" className="slider-image slider-before" />
           <div 
-            className="slider-before-wrapper"
-            style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+            className="slider-after-wrapper"
+            style={{ clipPath: `inset(0 0 0 ${position}%)` }}
           >
-            <img src={beforeImage} alt="Before" className="slider-image slider-before" />
+            <img src={afterImage} alt="After" className="slider-image slider-after" />
           </div>
           <div 
             className="slider-handle"
@@ -139,7 +139,7 @@ const Services = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Our Services</h2>
-          <p className="section-subtitle">Professional outdoor services tailored to your property</p>
+          <p className="section-subtitle">Expert pest control solutions tailored to your needs</p>
         </div>
         
         {/* Mobile Grid Layout */}
@@ -167,16 +167,20 @@ const Services = () => {
             ))}
           </div>
           <div className="services-content">
-            <div className="service-content-header">
-              <h3 className="service-content-title">{activeService.title}</h3>
-              <p className="service-content-price">{activeService.price}</p>
+            <div className="service-content-info">
+              <div className="service-content-header">
+                <h3 className="service-content-title">{activeService.title}</h3>
+                <p className="service-content-price">{activeService.price}</p>
+              </div>
+              <p className="service-content-description">{activeService.description}</p>
             </div>
-            <p className="service-content-description">{activeService.description}</p>
-            <BeforeAfterSlider 
-              beforeImage={activeService.beforeImage}
-              afterImage={activeService.afterImage}
-              position={sliderPosition}
-            />
+            <div className="service-content-image">
+              <BeforeAfterSlider 
+                beforeImage={activeService.beforeImage}
+                afterImage={activeService.afterImage}
+                position={sliderPosition}
+              />
+            </div>
           </div>
         </div>
       </div>

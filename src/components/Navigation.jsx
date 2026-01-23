@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
-import logo from '../assets/grounduplogo.png'
+import logo from '../assets/apexlogo.png'
 import './Navigation.css'
 
 const Navigation = () => {
@@ -115,8 +115,8 @@ const Navigation = () => {
         >
           <div className="panel-content">
             <div className="panel-logo" onClick={() => scrollToSection('hero')}>
-              <img src={logo} alt="Sample Business" className="panel-logo-image" />
-              <h2 className="panel-logo-text">Sample Business</h2>
+              <img src={logo} alt="Apex Pest Solutions" className="panel-logo-image" />
+              <h2 className="panel-logo-text">Apex Pest Solutions</h2>
             </div>
             <ul className="panel-menu">
               {navSections.map((section) => (

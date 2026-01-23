@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/grounduplogo.png'
+import logo from '../assets/apexlogo.png'
 import './Header.css'
 
 const Header = () => {
@@ -49,8 +49,8 @@ const Header = () => {
     <header className={`site-header ${isVisible ? 'visible' : 'hidden'}`}>
       <div className="header-container">
         <div className="header-logo" onClick={scrollToTop}>
-          <img src={logo} alt="Sample Business" className="logo-image" />
-          <h1 className="logo-text">Sample Business</h1>
+          <img src={logo} alt="Apex Pest Solutions" className="logo-image" />
+          <h1 className="logo-text">Apex Pest Solutions</h1>
         </div>
         <nav className="header-nav">
           {navSections.map((section) => (

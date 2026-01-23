@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Sample Business</h3>
-            <p>Transforming Your Outdoor Space</p>
-            <p className="footer-tagline">Professional lawn care, landscaping, and snow removal services you can trust. Keeping your property looking its best year-round.</p>
+            <h3>Apex Pest Solutions</h3>
+            <p>Professional Pest Control Services</p>
+            <p className="footer-tagline">Expert pest control solutions you can trust. Eliminating pests and protecting your home or business with safe, effective treatments year-round.</p>
           </div>
           <div className="footer-section">
             <h4>Quick Links</h4>
@@ -25,7 +25,7 @@ const Footer = () => {
             <h4>Contact Info</h4>
             <ul>
               <li><FaPhone /> (555) 123-4567</li>
-              <li><FaEnvelope /> contact@samplewebsite.com</li>
+              <li><FaEnvelope /> info@apexpestsolutions.com</li>
               <li>123 Main Street, Your City, State 12345</li>
             </ul>
           </div>
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Sample Business. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Apex Pest Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

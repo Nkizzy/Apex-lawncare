@@ -46,55 +46,55 @@ const Reviews = () => {
     {
       name: 'Michael Thompson',
       rating: 5,
-      text: 'Sample Business has been taking care of my lawn for two seasons now. They\'re reliable, professional, and my yard has never looked better. Highly recommend!',
+      text: 'Apex Pest Solutions eliminated our ant problem completely! They\'re reliable, professional, and my home has been pest-free for months. Highly recommend!',
       date: '2 weeks ago'
     },
     {
       name: 'Jennifer Martinez',
       rating: 5,
-      text: 'Best lawncare service in the area! They showed up right after the snowstorm and cleared my driveway perfectly. Always on time and thorough.',
+      text: 'Best pest control service in the area! They responded quickly to our rodent issue and solved it completely. Always on time and thorough.',
       date: '1 month ago'
     },
     {
       name: 'David Wilson',
       rating: 5,
-      text: 'Excellent landscaping work! They transformed my backyard into a beautiful space. The team is knowledgeable and the results exceeded my expectations.',
+      text: 'Excellent termite treatment! They inspected our entire property and provided comprehensive treatment. The team is knowledgeable and the results exceeded my expectations.',
       date: '3 weeks ago'
     },
     {
       name: 'Sarah Johnson',
       rating: 5,
-      text: 'The fertilization program they set up has made such a difference. My grass is thick, green, and healthy. Worth every penny!',
+      text: 'The bed bug treatment they provided was incredible. My home is completely free of bed bugs now. Worth every penny!',
       date: '1 week ago'
     },
     {
       name: 'Robert Chen',
       rating: 5,
-      text: 'I\'ve been using Sample Business for both lawn care and snow removal for over a year. Consistent quality, fair pricing, and they always communicate well.',
+      text: 'I\'ve been using Apex Pest Solutions for regular pest control for over a year. Consistent quality, fair pricing, and they always communicate well.',
       date: '5 days ago'
     },
     {
       name: 'Amanda Davis',
       rating: 5,
-      text: 'Perfect service! They handle everything from mowing to seasonal cleanup. My property always looks pristine. The attention to detail is unmatched.',
+      text: 'Perfect service! They handle everything from roaches to rodents. My property is always pest-free. The attention to detail is unmatched.',
       date: '3 days ago'
     },
     {
       name: 'James Anderson',
       rating: 5,
-      text: 'Outstanding snow removal service! They cleared my driveway and walkways quickly after the big storm. Professional, efficient, and reasonably priced.',
+      text: 'Outstanding wildlife removal service! They safely removed raccoons from our attic and sealed all entry points. Professional, efficient, and reasonably priced.',
       date: '1 day ago'
     },
     {
       name: 'Lisa Brown',
       rating: 5,
-      text: 'I\'ve tried several lawncare companies, but Sample Business is by far the best. They\'re reliable, professional, and my lawn has never looked better. Highly recommend!',
+      text: 'I\'ve tried several pest control companies, but Apex Pest Solutions is by far the best. They\'re reliable, professional, and my home has never been pest-free. Highly recommend!',
       date: '4 days ago'
     },
     {
       name: 'Mark Taylor',
       rating: 5,
-      text: 'Exceptional quality and service! The team is friendly, professional, and truly cares about giving you the best results. My yard looks absolutely amazing!',
+      text: 'Exceptional quality and service! The team is friendly, professional, and truly cares about eliminating pests completely. My home is absolutely pest-free!',
       date: '6 days ago'
     }
   ]

@@ -33,7 +33,7 @@ const SocialMedia = () => {
             <div className="social-embed instagram-link">
               <div className="instagram-content">
                 <FaInstagram className="instagram-large-icon" />
-                <h4>@samplebusiness</h4>
+                <h4>@apexpestsolutions</h4>
                 <p>This is a sample website. Instagram content would appear here.</p>
                 <p className="instagram-note">
                   <small>Note: Instagram doesn't allow full profile embeds. To embed individual posts, visit a specific post on Instagram, click the three dots (⋯), and select "Embed" to get the code.</small>
