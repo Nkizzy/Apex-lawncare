@@ -3,9 +3,9 @@ import Hero from './components/Hero'
 import Services from './components/Services'
 import Gallery from './components/Gallery'
 import Reviews from './components/Reviews'
-import SocialMedia from './components/SocialMedia'
 import Map from './components/Map'
 import Contact from './components/Contact'
+import RegulationCompliance from './components/RegulationCompliance'
 import Footer from './components/Footer'
 import Navigation from './components/Navigation'
 import Header from './components/Header'
@@ -20,9 +20,9 @@ function App() {
       <Services />
       <Gallery />
       <Reviews />
-      <SocialMedia />
       <Map />
       <Contact />
+      <RegulationCompliance />
       <Footer />
     </div>
   )

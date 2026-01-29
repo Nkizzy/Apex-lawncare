@@ -76,9 +76,9 @@ const Navigation = () => {
     { id: 'services', label: 'Services' },
     { id: 'gallery', label: 'Gallery' },
     { id: 'reviews', label: 'Reviews' },
-    { id: 'social', label: 'Social Media' },
     { id: 'map', label: 'Map' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Contact' },
+    { id: 'regulation-compliance', label: 'Compliance' }
   ]
 
   return (

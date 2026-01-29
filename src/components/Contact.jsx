@@ -46,12 +46,12 @@ const Contact = () => {
             <div className="info-card">
               <FaPhone className="info-icon" />
               <h3>Phone</h3>
-              <p>(555) 123-4567</p>
+              <p><a href="tel:+16076249569" className="phone-link">(607) 624-9569</a></p>
             </div>
             <div className="info-card">
               <FaEnvelope className="info-icon" />
               <h3>Email</h3>
-              <p>info@apexpestsolutions.com</p>
+              <p>apexpest607@gmail.com</p>
             </div>
             <div className="info-card">
               <FaMapMarkerAlt className="info-icon" />
@@ -64,6 +64,22 @@ const Contact = () => {
               <p>Mon-Fri: 8AM-6PM<br />Sat: 9AM-4PM<br />Sun: Emergency Only</p>
             </div>
           </div>
+          {!ENABLE_FORM && (
+            <div className="contact-facebook-embed">
+              <h3 className="contact-facebook-title">Follow us on Facebook</h3>
+              <iframe
+                src={`https://www.facebook.com/plugins/page.php?href=${encodeURIComponent('https://www.facebook.com/apexofpestservices')}&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true${import.meta.env.VITE_FACEBOOK_APP_ID ? `&appId=${import.meta.env.VITE_FACEBOOK_APP_ID}` : ''}`}
+                width="340"
+                height="500"
+                style={{ border: 'none', overflow: 'hidden', flex: 1, minHeight: 0 }}
+                scrolling="no"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                title="Apex Pest Solutions Facebook"
+              />
+            </div>
+          )}
           {ENABLE_FORM && (
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">

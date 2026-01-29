@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/apexlogo.png'
+import basketball from '../assets/basketball.jpg'
+import holes from '../assets/holes.jpg'
+import herobees from '../assets/herobees.jpg'
 import './Hero.css'
 
 const Hero = () => {
@@ -15,17 +18,17 @@ const Hero = () => {
   const galleryImages = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=500&fit=crop',
+      src: basketball,
       alt: 'Professional pest control service'
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400&h=400&fit=crop',
+      src: holes,
       alt: 'Pest inspection and treatment'
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=400&h=500&fit=crop',
+      src: herobees,
       alt: 'Expert pest control services'
     }
   ]

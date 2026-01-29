@@ -55,6 +55,18 @@
   color: var(--primary-color);
 }
 
+.footer-section .phone-link {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer-section .phone-link {
+    -webkit-tap-highlight-color: rgba(220, 38, 38, 0.2);
+    padding: 0.2em 0;
+    display: inline-block;
+  }
+}
+
 .social-links {
   display: flex;
   gap: 1rem;
@@ -78,6 +90,16 @@
 .social-links a:hover {
   background: var(--primary-color);
   transform: translateY(-3px);
+}
+
+.social-links a.facebook-link {
+  background: rgba(24, 119, 242, 0.15);
+  color: #1877f2;
+}
+
+.social-links a.facebook-link:hover {
+  background: #1877f2;
+  color: var(--white);
 }
 
 .footer-bottom {

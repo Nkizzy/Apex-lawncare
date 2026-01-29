@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaPhone, FaEnvelope } from 'react-icons/fa'
+import { FaFacebook, FaPhone, FaEnvelope } from 'react-icons/fa'
 import './Footer.css'
 
 const Footer = () => {
@@ -24,15 +24,23 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Info</h4>
             <ul>
-              <li><FaPhone /> (555) 123-4567</li>
-              <li><FaEnvelope /> info@apexpestsolutions.com</li>
+              <li><FaPhone /> <a href="tel:+16076249569" className="phone-link">(607) 624-9569</a></li>
+              <li><FaEnvelope /> apexpest607@gmail.com</li>
               <li>123 Main Street, Your City, State 12345</li>
             </ul>
           </div>
           <div className="footer-section">
             <h4>Follow Us</h4>
             <div className="social-links">
-              <p className="social-placeholder-text">This is a sample website. Social media links would appear here.</p>
+              <a
+                href="https://www.facebook.com/apexofpestservices"
+                className="facebook-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Apex Pest Solutions on Facebook"
+              >
+                <FaFacebook />
+              </a>
             </div>
           </div>
         </div>

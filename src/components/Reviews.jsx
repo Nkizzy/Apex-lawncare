@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight, FaFacebook } from 'react-icons/fa'
 import './Reviews.css'
 
 const Reviews = () => {
@@ -44,142 +44,73 @@ const Reviews = () => {
 
   const reviews = [
     {
-      name: 'Michael Thompson',
+      name: 'Kelsey F',
       rating: 5,
-      text: 'Apex Pest Solutions eliminated our ant problem completely! They\'re reliable, professional, and my home has been pest-free for months. Highly recommend!',
+      text: 'I bought a house to find out I had a mosquito, cluster fly and wasp problem! Apex came right out to help! Thank you so much!! I highly recommend',
       date: '2 weeks ago'
     },
     {
-      name: 'Jennifer Martinez',
+      name: 'Jamie B',
       rating: 5,
-      text: 'Best pest control service in the area! They responded quickly to our rodent issue and solved it completely. Always on time and thorough.',
+      text: 'Had Apex treat our property for ticks recently and was very pleased with the outcome and service that was provided. The entire process was seamless. No doubt I recommend their services! Thank you Apex!',
       date: '1 month ago'
     },
     {
-      name: 'David Wilson',
+      name: 'Jenn B',
       rating: 5,
-      text: 'Excellent termite treatment! They inspected our entire property and provided comprehensive treatment. The team is knowledgeable and the results exceeded my expectations.',
+      text: 'They showed up same day to assess the situation and came out over the weekend to follow through. Very comfortable dealing with them myself while my husband was out of town. Very friendly understanding and professional. Will absolutely have them on speed dial from now on. 💯 recommend.',
       date: '3 weeks ago'
     },
     {
-      name: 'Sarah Johnson',
+      name: 'Matthew L',
       rating: 5,
-      text: 'The bed bug treatment they provided was incredible. My home is completely free of bed bugs now. Worth every penny!',
+      text: 'Apex was great! Quick response, quoting, and delivery of services. Will work with them again!',
       date: '1 week ago'
     },
     {
-      name: 'Robert Chen',
+      name: 'Paula S',
       rating: 5,
-      text: 'I\'ve been using Apex Pest Solutions for regular pest control for over a year. Consistent quality, fair pricing, and they always communicate well.',
+      text: 'We have had a great experience with this company and I highly recommend him. The solutions he uses work wonderful.',
       date: '5 days ago'
     },
     {
-      name: 'Amanda Davis',
+      name: 'Philip P',
       rating: 5,
-      text: 'Perfect service! They handle everything from roaches to rodents. My property is always pest-free. The attention to detail is unmatched.',
-      date: '3 days ago'
-    },
-    {
-      name: 'James Anderson',
-      rating: 5,
-      text: 'Outstanding wildlife removal service! They safely removed raccoons from our attic and sealed all entry points. Professional, efficient, and reasonably priced.',
-      date: '1 day ago'
-    },
-    {
-      name: 'Lisa Brown',
-      rating: 5,
-      text: 'I\'ve tried several pest control companies, but Apex Pest Solutions is by far the best. They\'re reliable, professional, and my home has never been pest-free. Highly recommend!',
+      text: 'Did a great job on my farm, had a really bad carpenter bee infestation. Did all my barns for a very fair price and included a treatment around my house & garage as well.',
       date: '4 days ago'
     },
     {
-      name: 'Mark Taylor',
+      name: 'Antonio F',
       rating: 5,
-      text: 'Exceptional quality and service! The team is friendly, professional, and truly cares about eliminating pests completely. My home is absolutely pest-free!',
+      text: 'I called Joe and he promptly responded to my call! He made our property a priority and did exactly what he said he was going to do! Prompt service highly recommended! A+++++++++',
       date: '6 days ago'
+    },
+    {
+      name: 'Jennifer D',
+      rating: 5,
+      text: 'Apex Pest Solutions provides exceptional services at our home. Their customer service is top notch. Always there when we need them. They are very knowledgeable and go above and beyond for all of their customers. Thank you Apex',
+      date: '1 week ago'
     }
   ]
 
   const totalReviews = reviews.length
   const visibleCount = isMobile ? 1 : 3
-
-  // Create extended array with duplicates for seamless looping
-  const extendedReviews = [
-    ...reviews.slice(-visibleCount), // Add last few at the beginning
-    ...reviews,
-    ...reviews.slice(0, visibleCount) // Add first few at the end
-  ]
-
-  const extendedTotal = extendedReviews.length
-  const offset = visibleCount // Offset to account for prepended items
+  const maxIndex = Math.max(0, totalReviews - visibleCount)
 
   const handleNext = () => {
     if (isTransitioning) return
-    
+    if (currentIndex >= maxIndex) return
     setIsTransitioning(true)
-    setCurrentIndex((prev) => {
-      const nextIndex = prev + 1
-      
-      // If we've reached the end of the original array (accounting for offset)
-      if (nextIndex >= totalReviews + offset) {
-        // After transition completes, reset to beginning without animation
-        setTimeout(() => {
-          if (carouselRef.current) {
-            carouselRef.current.style.transition = 'none'
-            setCurrentIndex(offset)
-            // Force reflow
-            carouselRef.current.offsetHeight
-            // Restore transition on next frame
-            requestAnimationFrame(() => {
-              requestAnimationFrame(() => {
-                if (carouselRef.current) {
-                  carouselRef.current.style.transition = ''
-                }
-                setIsTransitioning(false)
-              })
-            })
-          }
-        }, 300)
-        return nextIndex
-      }
-      
-      setTimeout(() => setIsTransitioning(false), 300)
-      return nextIndex
-    })
+    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex))
+    setTimeout(() => setIsTransitioning(false), 300)
   }
 
   const handlePrevious = () => {
     if (isTransitioning) return
-    
+    if (currentIndex <= 0) return
     setIsTransitioning(true)
-    setCurrentIndex((prev) => {
-      const prevIndex = prev - 1
-      
-      // If we've reached the beginning of the original array (accounting for offset)
-      if (prevIndex < offset) {
-        // After transition completes, reset to end without animation
-        setTimeout(() => {
-          if (carouselRef.current) {
-            carouselRef.current.style.transition = 'none'
-            setCurrentIndex(totalReviews + offset - 1)
-            // Force reflow
-            carouselRef.current.offsetHeight
-            // Restore transition on next frame
-            requestAnimationFrame(() => {
-              requestAnimationFrame(() => {
-                if (carouselRef.current) {
-                  carouselRef.current.style.transition = ''
-                }
-                setIsTransitioning(false)
-              })
-            })
-          }
-        }, 300)
-        return prevIndex
-      }
-      
-      setTimeout(() => setIsTransitioning(false), 300)
-      return prevIndex
-    })
+    setCurrentIndex((prev) => Math.max(prev - 1, 0))
+    setTimeout(() => setIsTransitioning(false), 300)
   }
 
   // Update transform position
@@ -204,11 +135,9 @@ const Reviews = () => {
     })
   }, [currentIndex, isMobile])
 
-  // Reset to offset position on mount and when mobile state changes
+  // Reset to start when mobile state changes
   useEffect(() => {
-    const currentVisibleCount = isMobile ? 1 : 3
-    const currentOffset = currentVisibleCount
-    setCurrentIndex(currentOffset)
+    setCurrentIndex(0)
     setIsTransitioning(false)
   }, [isMobile])
 
@@ -224,7 +153,7 @@ const Reviews = () => {
             className="carousel-arrow carousel-arrow-left" 
             onClick={handlePrevious}
             aria-label="Previous review"
-            disabled={isTransitioning}
+            disabled={isTransitioning || currentIndex <= 0}
           >
             <FaChevronLeft />
           </button>
@@ -233,17 +162,11 @@ const Reviews = () => {
               ref={carouselRef}
               className="reviews-carousel-container"
             >
-              {extendedReviews.map((review, index) => (
+              {reviews.map((review, index) => (
                 <div key={`${index}-${review.name}`} className="review-card">
-                  <div className="review-rating">
-                    {[...Array(review.rating)].map((_, j) => (
-                      <FaStar key={j} className="star" />
-                    ))}
-                  </div>
                   <p className="review-text">"{review.text}"</p>
                   <div className="review-author">
                     <strong>{review.name}</strong>
-                    <span className="review-date">{review.date}</span>
                   </div>
                 </div>
               ))}
@@ -253,11 +176,24 @@ const Reviews = () => {
             className="carousel-arrow carousel-arrow-right" 
             onClick={handleNext}
             aria-label="Next review"
-            disabled={isTransitioning}
+            disabled={isTransitioning || currentIndex >= maxIndex}
           >
             <FaChevronRight />
           </button>
         </div>
+        <p className="reviews-facebook-cta">
+          To see more or write a review, check out our{' '}
+          <a
+            href="https://www.facebook.com/apexofpestservices"
+            className="reviews-facebook-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Apex Pest Solutions on Facebook"
+          >
+            <FaFacebook className="reviews-facebook-icon" /> Facebook
+          </a>
+          !
+        </p>
       </div>
     </section>
   )

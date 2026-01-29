@@ -7,7 +7,7 @@
 
 .reviews-carousel-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin: 2rem 0;
   padding: 0 80px;
   width: 100%;
@@ -24,6 +24,7 @@
   transition: transform 0.3s ease;
   gap: 2rem;
   will-change: transform;
+  align-items: center;
 }
 
 .review-card {
@@ -57,13 +58,11 @@
   z-index: 10;
   font-size: 1.2rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-arrow:hover:not(:disabled) {
   background: var(--secondary-color);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 6px 20px rgba(74, 124, 42, 0.4);
 }
 
 .carousel-arrow:disabled {
@@ -72,22 +71,11 @@
 }
 
 .carousel-arrow-left {
-  left: 0;
+  left: 16px;
 }
 
 .carousel-arrow-right {
-  right: 0;
-}
-
-.review-rating {
-  display: flex;
-  gap: 0.3rem;
-  margin-bottom: 1rem;
-}
-
-.star {
-  color: #ffc107;
-  font-size: 1.2rem;
+  right: 16px;
 }
 
 .review-text {
@@ -99,7 +87,7 @@
 
 .review-author {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 1rem;
   border-top: 1px solid rgba(220, 38, 38, 0.2);
@@ -110,9 +98,40 @@
   font-size: 1rem;
 }
 
-.review-date {
+.reviews-facebook-cta {
+  text-align: center;
+  margin-top: 2rem;
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.reviews-facebook-link {
+  display: inline;
+  color: #1877f2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  vertical-align: baseline;
+}
+
+.reviews-facebook-link:hover {
+  color: #0d65d9;
+  text-decoration: underline;
+}
+
+.reviews-facebook-icon {
+  font-size: 1em;
+  color: #1877f2;
+  vertical-align: middle;
+  margin-right: 0.25em;
+}
+
+.reviews-facebook-link:hover .reviews-facebook-icon {
+  color: #0d65d9;
+}
+
+.reviews-facebook-cta .reviews-facebook-icon {
+  display: inline;
 }
 
 @media (max-width: 768px) {
