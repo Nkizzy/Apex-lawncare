@@ -149,7 +149,7 @@
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem 0;
+    gap: 1rem 1.5rem;
   }
 
   .reviews-carousel-viewport {
