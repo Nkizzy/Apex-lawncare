@@ -44,6 +44,24 @@ const Reviews = () => {
 
   const reviews = [
     {
+      name: 'Philip P',
+      rating: 5,
+      text: 'Did a great job on my farm, had a really bad carpenter bee infestation. Did all my barns for a very fair price and included a treatment around my house & garage as well.',
+      date: '4 days ago'
+    },
+    {
+      name: 'Antonio F',
+      rating: 5,
+      text: 'I called Joe and he promptly responded to my call! He made our property a priority and did exactly what he said he was going to do! Prompt service highly recommended! A+++++++++',
+      date: '6 days ago'
+    },
+    {
+      name: 'Jennifer D',
+      rating: 5,
+      text: 'Apex Pest Solutions provides exceptional services at our home. Their customer service is top notch. Always there when we need them. They are very knowledgeable and go above and beyond for all of their customers. Thank you Apex',
+      date: '1 week ago'
+    },
+    {
       name: 'Kelsey F',
       rating: 5,
       text: 'I bought a house to find out I had a mosquito, cluster fly and wasp problem! Apex came right out to help! Thank you so much!! I highly recommend',
@@ -72,24 +90,6 @@ const Reviews = () => {
       rating: 5,
       text: 'We have had a great experience with this company and I highly recommend him. The solutions he uses work wonderful.',
       date: '5 days ago'
-    },
-    {
-      name: 'Philip P',
-      rating: 5,
-      text: 'Did a great job on my farm, had a really bad carpenter bee infestation. Did all my barns for a very fair price and included a treatment around my house & garage as well.',
-      date: '4 days ago'
-    },
-    {
-      name: 'Antonio F',
-      rating: 5,
-      text: 'I called Joe and he promptly responded to my call! He made our property a priority and did exactly what he said he was going to do! Prompt service highly recommended! A+++++++++',
-      date: '6 days ago'
-    },
-    {
-      name: 'Jennifer D',
-      rating: 5,
-      text: 'Apex Pest Solutions provides exceptional services at our home. Their customer service is top notch. Always there when we need them. They are very knowledgeable and go above and beyond for all of their customers. Thank you Apex',
-      date: '1 week ago'
     }
   ]
 
