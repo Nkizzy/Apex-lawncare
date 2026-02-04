@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../assets/apexlogo.png'
+import logo from '../assets/apexbiglogo.png'
 import basketball from '../assets/basketball.jpg'
 import holes from '../assets/holes.jpg'
 import herobees from '../assets/herobees.jpg'

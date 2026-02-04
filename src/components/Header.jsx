@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/apexlogo.png'
+import logo from '../assets/apexbiglogo.png'
 import './Header.css'
 
 const Header = () => {

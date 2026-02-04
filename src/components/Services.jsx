@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import './Services.css'
+import apexporch from '../assets/apexporch.jpg'
+import holes from '../assets/holes.jpg'
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(0)
@@ -9,7 +11,7 @@ const Services = () => {
       title: 'General Pest Management',
       description: 'Comprehensive pest control for ants, roaches, spiders, and other common pests. Safe, professional treatments that protect your family and pets.',
       price: 'Starting at $175',
-      image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop'
+      image: apexporch
     },
     {
       title: 'Mosquito and Tick Control',
@@ -33,7 +35,7 @@ const Services = () => {
       title: 'Rodent Removal',
       description: 'Comprehensive rodent control including mice, rats, and squirrels. We identify entry points, remove existing pests, and prevent future infestations.',
       price: 'Starting at $300',
-      image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&h=600&fit=crop'
+      image: holes
     }
   ]
 

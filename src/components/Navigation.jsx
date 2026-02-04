@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa'
-import logo from '../assets/apexlogo.png'
+import logo from '../assets/apexbiglogo.png'
 import './Navigation.css'
 
 const Navigation = () => {
