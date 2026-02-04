@@ -12,16 +12,20 @@
   margin-top: 3rem;
 }
 
-/* When form is disabled: contact info + Facebook embed */
+/* When form is disabled: contact info + Facebook embed, centered side by side, same height */
 .contact-content.form-disabled {
-  grid-template-columns: 1fr 340px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: stretch;
+  gap: 2rem;
 }
 
 .contact-content.form-disabled .contact-info {
-  max-width: none;
+  max-width: 320px;
   width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  align-content: start;
 }
 
 .contact-facebook-embed {
@@ -58,7 +62,7 @@
 
 .info-card {
   background: var(--white);
-  padding: 2rem;
+  padding: 1rem 1.25rem;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -161,12 +165,8 @@
   }
 
   .contact-content.form-disabled {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  .contact-facebook-embed {
-    justify-self: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact-info {

@@ -28,10 +28,6 @@ const Map = () => {
             <h3>Apex Pest Solutions</h3>
             <p className="map-address">{address}</p>
             <div className="map-hours">
-              <h4>Service Hours</h4>
-              <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-              <p>Saturday: 9:00 AM - 4:00 PM</p>
-              <p>Sunday: Emergency services only</p>
               <p className="map-note"><small>Emergency pest control available 24/7. Call for immediate assistance with urgent pest problems.</small></p>
             </div>
           </div>

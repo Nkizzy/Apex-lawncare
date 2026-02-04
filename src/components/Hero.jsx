@@ -54,10 +54,6 @@ const Hero = () => {
             Pest Solutions
           </h1>
           <p className="hero-subtitle">Professional Pest Control Services</p>
-          <p className="hero-description">
-            Expert pest control solutions you can trust. From ants and roaches to rodents and termites,
-            we eliminate pests and protect your home or business with safe, effective treatments.
-          </p>
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">Get a Quote</a>
             <a href="#services" className="btn btn-secondary">Our Services</a>

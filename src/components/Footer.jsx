@@ -25,7 +25,7 @@ const Footer = () => {
             <ul>
               <li><FaPhone /> <a href="tel:+16076249569" className="phone-link">(607) 624-9569</a></li>
               <li><FaEnvelope /> apexpest607@gmail.com</li>
-              <li>123 Main Street, Your City, State 12345</li>
+              <li>7 Scott St, Bainbridge, NY 13733</li>
             </ul>
           </div>
           <div className="footer-section">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import './Contact.css'
 
 const Contact = () => {
@@ -57,11 +57,6 @@ const Contact = () => {
               <FaMapMarkerAlt className="info-icon" />
               <h3>Address</h3>
               <p>123 Main Street<br />Your City, State 12345</p>
-            </div>
-            <div className="info-card">
-              <FaClock className="info-icon" />
-              <h3>Hours</h3>
-              <p>Mon-Fri: 8AM-6PM<br />Sat: 9AM-4PM<br />Sun: Emergency Only</p>
             </div>
           </div>
           {!ENABLE_FORM && (
@@ -124,7 +119,7 @@ const Contact = () => {
                 >
                   <option value="">Select a service</option>
                   <option value="general-pest">General Pest Management</option>
-                  <option value="mosquito-tick">Mosquito and Tick Control</option>
+                  <option value="mosquito-tick">Mosquito & Tick Control</option>
                   <option value="termite">Termite Treatment</option>
                   <option value="bedbug">Bed Bug Extermination</option>
                   <option value="rodent">Rodent Removal</option>

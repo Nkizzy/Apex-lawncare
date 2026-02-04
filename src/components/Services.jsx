@@ -1,10 +1,53 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import './Services.css'
 import apexporch from '../assets/apexporch.jpg'
 import holes from '../assets/holes.jpg'
+import pestvideo from '../assets/pestvideo.mp4'
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState(0)
+  const [videoStillUrl, setVideoStillUrl] = useState(null)
+  const videoRef = useRef(null)
+  const capturingForStillRef = useRef(false)
+
+  const TRIM_SECONDS = 2 / 3
+
+  const captureVideoStill = (video) => {
+    if (!video || video.readyState < 2) return
+    const canvas = document.createElement('canvas')
+    canvas.width = video.videoWidth
+    canvas.height = video.videoHeight
+    const ctx = canvas.getContext('2d')
+    ctx.drawImage(video, 0, 0)
+    setVideoStillUrl(canvas.toDataURL('image/jpeg', 0.9))
+  }
+
+  const handleVideoLoadedMetadata = (e) => {
+    const video = e.target
+    if (video.duration && !isNaN(video.duration)) {
+      video.currentTime = TRIM_SECONDS
+    }
+  }
+
+  const handleVideoTimeUpdate = (e) => {
+    const video = e.target
+    if (!video.duration || isNaN(video.duration)) return
+    const trimEnd = Math.max(TRIM_SECONDS, video.duration - TRIM_SECONDS)
+    if (video.currentTime >= trimEnd) {
+      video.pause()
+      capturingForStillRef.current = true
+      video.currentTime = video.duration * 0.5
+    }
+  }
+
+  const handleVideoSeeked = (e) => {
+    if (!capturingForStillRef.current) return
+    capturingForStillRef.current = false
+    const video = e.target
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => captureVideoStill(video))
+    })
+  }
 
   const services = [
     {
@@ -14,13 +57,14 @@ const Services = () => {
       image: apexporch
     },
     {
-      title: 'Mosquito and Tick Control',
+      title: 'Mosquito & Tick Control',
       description: 'Reduce mosquitoes and ticks in your yard with barrier treatments and ongoing control. Enjoy your outdoor space with fewer bites and lower risk of tick- and mosquito-borne illness.',
       price: 'Starting at $65/month',
-      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop'
+      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop',
+      video: pestvideo
     },
     {
-      title: 'Lawn and Vegetation Management',
+      title: 'Lawn & Vegetation Management',
       description: 'Targeted applications to remove unwanted plants and weeds from business and residential properties, to improve street appeal.',
       price: 'Starting at $65/month',
       image: 'https://images.unsplash.com/photo-1563241527-3004b7be0dff?w=800&h=600&fit=crop'
@@ -83,7 +127,26 @@ const Services = () => {
             </div>
             <div className="service-content-image">
               <div className="service-image-wrap">
-                <img src={activeService.image} alt={activeService.title} />
+                {activeService.video ? (
+                  videoStillUrl ? (
+                    <img src={videoStillUrl} alt={activeService.title} className="service-video-still" />
+                  ) : (
+                    <video
+                      ref={videoRef}
+                      src={activeService.video}
+                      autoPlay
+                      muted
+                      playsInline
+                      controls
+                      className="service-video"
+                      onLoadedMetadata={handleVideoLoadedMetadata}
+                      onTimeUpdate={handleVideoTimeUpdate}
+                      onSeeked={handleVideoSeeked}
+                    />
+                  )
+                ) : (
+                  <img src={activeService.image} alt={activeService.title} />
+                )}
               </div>
             </div>
           </div>

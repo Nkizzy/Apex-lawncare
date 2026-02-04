@@ -188,12 +188,20 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.service-image-wrap img {
+.service-image-wrap img,
+.service-image-wrap .service-video,
+.service-image-wrap .service-video-still {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+}
+
+.service-image-wrap .service-video,
+.service-image-wrap .service-video-still {
+  object-fit: cover;
+  object-position: center 35%;
 }
 
 /* Desktop: Show tabbed layout, hide grid */
