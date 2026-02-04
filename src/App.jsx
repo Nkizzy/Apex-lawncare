@@ -1,7 +1,6 @@
 import React from 'react'
 import Hero from './components/Hero'
 import Services from './components/Services'
-import Gallery from './components/Gallery'
 import Reviews from './components/Reviews'
 import Map from './components/Map'
 import Contact from './components/Contact'
@@ -18,7 +17,6 @@ function App() {
       <Navigation />
       <Hero />
       <Services />
-      <Gallery />
       <Reviews />
       <Map />
       <Contact />

@@ -22,7 +22,7 @@ const Gallery = () => {
     { 
       id: 4, 
       src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=800&fit=crop', 
-      alt: 'Rodent control and removal' 
+      alt: 'Mosquito and tick control' 
     },
     { 
       id: 5, 
@@ -37,12 +37,12 @@ const Gallery = () => {
     { 
       id: 7, 
       src: 'https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800&h=800&fit=crop', 
-      alt: 'Ant and roach control' 
+      alt: 'General pest management' 
     },
     { 
       id: 8, 
       src: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=800&fit=crop', 
-      alt: 'Wildlife removal service' 
+      alt: 'Rodent removal service' 
     },
     { 
       id: 9, 

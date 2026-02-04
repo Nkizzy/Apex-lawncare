@@ -123,11 +123,11 @@ const Contact = () => {
                   onChange={handleChange}
                 >
                   <option value="">Select a service</option>
-                  <option value="ant-roach">Ant & Roach Control</option>
-                  <option value="rodent">Rodent Removal</option>
+                  <option value="general-pest">General Pest Management</option>
+                  <option value="mosquito-tick">Mosquito and Tick Control</option>
                   <option value="termite">Termite Treatment</option>
                   <option value="bedbug">Bed Bug Extermination</option>
-                  <option value="wildlife">Wildlife Removal</option>
+                  <option value="rodent">Rodent Removal</option>
                   <option value="other">Other</option>
                 </select>
               </div>

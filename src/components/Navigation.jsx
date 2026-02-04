@@ -74,11 +74,10 @@ const Navigation = () => {
   const navSections = [
     { id: 'hero', label: 'Home' },
     { id: 'services', label: 'Services' },
-    { id: 'gallery', label: 'Gallery' },
     { id: 'reviews', label: 'Reviews' },
     { id: 'map', label: 'Map' },
     { id: 'contact', label: 'Contact' },
-    { id: 'regulation-compliance', label: 'Compliance' }
+    { id: 'labels-sds', label: 'Labels/SDS' }
   ]
 
   return (

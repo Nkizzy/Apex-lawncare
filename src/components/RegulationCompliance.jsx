@@ -21,11 +21,11 @@ const complianceItems = [
 
 const RegulationCompliance = () => {
   return (
-    <section id="regulation-compliance" className="regulation-compliance">
+    <section id="labels-sds" className="regulation-compliance">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Regulation Compliance</h2>
-          <p className="section-subtitle">Tools and equipment we use to meet regulatory standards</p>
+          <h2 className="section-title">Labels/SDS</h2>
+          <p className="section-subtitle">Safety data sheets and product labels</p>
         </div>
         <div className="regulation-compliance-grid">
           {complianceItems.map((item) => (
