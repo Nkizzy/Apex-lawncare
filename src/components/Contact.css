@@ -185,6 +185,8 @@
 
   .contact-facebook-embed iframe {
     max-width: 100%;
+    min-height: 400px;
+    aspect-ratio: 1 / 1.15;
   }
 
   .contact-form {
