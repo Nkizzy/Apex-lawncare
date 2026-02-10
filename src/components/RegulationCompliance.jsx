@@ -2,21 +2,9 @@ import React from 'react'
 import './RegulationCompliance.css'
 
 const complianceItems = [
-  {
-    title: 'Safety Equipment',
-    description: 'We use certified safety equipment and personal protective gear that meets regulatory standards for pest control applications.',
-    link: 'https://example.com/safety-equipment'
-  },
-  {
-    title: 'Application Tools',
-    description: 'Our application tools are selected and maintained in accordance with industry regulations for safe and effective treatment.',
-    link: 'https://example.com/application-tools'
-  },
-  {
-    title: 'Monitoring Devices',
-    description: 'Monitoring devices we use comply with relevant standards for accurate detection and reporting in pest management.',
-    link: 'https://example.com/monitoring-devices'
-  }
+  { title: 'Safety Equipment', link: 'https://example.com/safety-equipment' },
+  { title: 'Application Tools', link: 'https://example.com/application-tools' },
+  { title: 'Monitoring Devices', link: 'https://example.com/monitoring-devices' }
 ]
 
 const RegulationCompliance = () => {
@@ -30,7 +18,6 @@ const RegulationCompliance = () => {
           {complianceItems.map((item) => (
             <div key={item.title} className="compliance-item">
               <h3 className="compliance-item-title">{item.title}</h3>
-              <p className="compliance-item-description">{item.description}</p>
               <a
                 href="#"
                 className="compliance-link"

@@ -64,7 +64,7 @@ const Services = () => {
       video: pestvideo
     },
     {
-      title: 'Lawn & Vegetation Management',
+      title: 'Weed & Vegetation Management',
       description: 'Targeted applications to remove unwanted plants and weeds from business and residential properties, to improve street appeal.',
       price: 'Starting at $65/month',
       image: 'https://images.unsplash.com/photo-1563241527-3004b7be0dff?w=800&h=600&fit=crop'
@@ -87,6 +87,15 @@ const Services = () => {
 
   return (
     <section id="services" className="services">
+      {/* Preload mosquito video so it's ready when the tab is clicked */}
+      <video
+        src={pestvideo}
+        preload="auto"
+        muted
+        playsInline
+        aria-hidden="true"
+        style={{ position: 'absolute', width: 0, height: 0, opacity: 0, pointerEvents: 'none' }}
+      />
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Our Services</h2>
@@ -126,28 +135,35 @@ const Services = () => {
               <p className="service-content-description">{activeService.description}</p>
             </div>
             <div className="service-content-image">
-              <div className="service-image-wrap">
-                {activeService.video ? (
-                  videoStillUrl ? (
-                    <img src={videoStillUrl} alt={activeService.title} className="service-video-still" />
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="service-image-wrap"
+                  style={{ display: index === activeTab ? 'block' : 'none' }}
+                  aria-hidden={index !== activeTab}
+                >
+                  {service.video ? (
+                    videoStillUrl ? (
+                      <img src={videoStillUrl} alt={service.title} className="service-video-still" />
+                    ) : (
+                      <video
+                        ref={videoRef}
+                        src={service.video}
+                        autoPlay
+                        muted
+                        playsInline
+                        controls
+                        className="service-video"
+                        onLoadedMetadata={handleVideoLoadedMetadata}
+                        onTimeUpdate={handleVideoTimeUpdate}
+                        onSeeked={handleVideoSeeked}
+                      />
+                    )
                   ) : (
-                    <video
-                      ref={videoRef}
-                      src={activeService.video}
-                      autoPlay
-                      muted
-                      playsInline
-                      controls
-                      className="service-video"
-                      onLoadedMetadata={handleVideoLoadedMetadata}
-                      onTimeUpdate={handleVideoTimeUpdate}
-                      onSeeked={handleVideoSeeked}
-                    />
-                  )
-                ) : (
-                  <img src={activeService.image} alt={activeService.title} />
-                )}
-              </div>
+                    <img src={service.image} alt={service.title} loading="eager" />
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>
