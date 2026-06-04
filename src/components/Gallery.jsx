@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Gallery.css'
+import bedbugs from '../assets/bedbugs.jpg'
 
 const Gallery = () => {
   // Gallery images - pest control service photos
@@ -31,7 +32,7 @@ const Gallery = () => {
     },
     { 
       id: 6, 
-      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=800&fit=crop', 
+      src: bedbugs, 
       alt: 'Bed bug extermination service' 
     },
     { 

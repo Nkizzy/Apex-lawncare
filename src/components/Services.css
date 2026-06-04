@@ -213,19 +213,37 @@
   .services-tabbed {
     display: flex;
   }
+
+  .services-content {
+    gap: 1.25rem;
+  }
+
+  .service-image-wrap {
+    max-width: 540px;
+  }
 }
 
 /* Laptop and larger: Side-by-side layout */
 @media (min-width: 1024px) {
   .services-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: stretch;
+    grid-template-columns: 1fr auto;
+    gap: 1.25rem;
+    align-items: center;
   }
   
   .service-content-info {
-    padding: 1rem 0;
+    padding: 0;
+  }
+
+  .service-content-image {
+    justify-content: flex-start;
+  }
+
+  .service-image-wrap {
+    max-width: 520px;
+    width: 100%;
+    margin: 0;
   }
 }
 

@@ -3,6 +3,7 @@ import './Services.css'
 import apexporch from '../assets/apexporch.jpg'
 import holes from '../assets/holes.jpg'
 import weeds from '../assets/weeds.jpg'
+import bedbugs from '../assets/bedbugs.jpg'
 import pestvideo from '../assets/pestvideo.mp4'
 
 const TRIM_SECONDS = 2 / 3
@@ -103,7 +104,7 @@ const Services = () => {
       title: 'Bed Bug Extermination',
       description: 'Complete bed bug elimination using heat treatment and targeted applications. We ensure thorough removal and provide follow-up inspections.',
       price: 'Starting at $450',
-      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop'
+      image: bedbugs
     },
     {
       title: 'Rodent Removal',

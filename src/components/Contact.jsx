@@ -65,7 +65,7 @@ const Contact = () => {
             <div className="info-card">
               <FaMapMarkerAlt className="info-icon" />
               <h3>Address</h3>
-              <p>7 Scott St, Bainbridge, NY 13733</p>
+              <p>24 S Main Street, Bainbridge, NY</p>
             </div>
           </div>
           {!ENABLE_FORM && (

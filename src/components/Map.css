@@ -102,10 +102,28 @@
   color: var(--primary-color);
 }
 
+.map-address-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.map-address-row .map-address {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 12rem;
+}
+
+.map-contact-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .map-address {
   color: var(--text-light);
   font-size: clamp(1.05rem, 1.2vw, 1.3rem);
-  margin-bottom: 2rem;
   line-height: 1.6;
 }
 

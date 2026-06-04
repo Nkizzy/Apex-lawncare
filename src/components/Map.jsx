@@ -2,7 +2,8 @@ import React from 'react'
 import './Map.css'
 
 const Map = () => {
-  const address = "7 Scott St, Bainbridge, NY 13733"
+  const address = "24 S Main Street, Bainbridge, NY"
+  const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&hl=en&z=16&output=embed`
 
   return (
     <section id="map" className="map-section">
@@ -14,7 +15,7 @@ const Map = () => {
         <div className="map-container">
           <div className="map-wrapper">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d768.7020013240843!2d-75.48208471771397!3d42.29297262862252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dba65628aa7513%3A0xbca6f29bfcfd439!2s7%20Scott%20St%2C%20Bainbridge%2C%20NY%2013733!5e1!3m2!1sen!2sus!4v1770228777908!5m2!1sen!2sus" 
+              src={mapEmbedUrl} 
               width="600"
               height="450"
               style={{ border: 0 }}
@@ -26,7 +27,12 @@ const Map = () => {
           </div>
           <div className="map-info">
             <h3>Apex Pest Solutions</h3>
-            <p className="map-address">{address}</p>
+            <div className="map-address-row">
+              <p className="map-address">{address}</p>
+              <a href="#contact" className="map-link map-contact-btn">
+                Contact Us
+              </a>
+            </div>
             <div className="map-hours">
               <p className="map-note"><small>Emergency pest control available 24/7. Call for immediate assistance with urgent pest problems.</small></p>
             </div>
